@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>US Election Map</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid p-5 text-center">
+        <h1 class="display-2"> US Election Map</h1>
+        <p>Due to FIPS codes not matching up in dataset and mapdata, Black represents missing data</p>
+    </div>
+    <div class="controls container">
+        <div class="yearSelection m-2">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" id="btn2004"> 2004 </button>
+                <button type="button" class="btn btn-primary" id="btn2008"> 2008 </button>
+                <button type="button" class="btn btn-primary" id="btn2012"> 2012 </button>
+            </div>
+        </div>
+        <div class="statecounty m-2">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="options" id="byCounty" autocomplete="off" checked> By County
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="byState" autocomplete="off"> By State
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="viz container">
+        <svg>
+            <!-- d3 viz goes here -->
+        </svg>
+    </div>
+</body>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="index.js"></script>
+
+</html>
